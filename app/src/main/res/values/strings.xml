@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">POKEMONS</string>
+
+    <string name="pokemon_name">Name</string>
+    <string-array name="pokemon_names_arr">
+        <item>Бульбазавр</item>
+        <item>Ивизавр</item>
+        <item>Венузавр</item>
+        <item>Чармандер</item>
+        <item>Чармелеон</item>
+        <item>Чаризард</item>
+        <item>Сквиртл</item>
+        <item>Вартортл</item>
+        <item>Бластойз</item>
+        <item>Катерпи</item>
+    </string-array>
+
+
+<!--    <string name="pokemon_image">Image</string>-->
+<!--    <integer-array name="pokemon_image_id_arr">-->
+<!--        <item>@drawable/bulba</item>-->
+<!--        <item>@drawable/ivi</item>-->
+<!--        <item>@drawable/venu</item>-->
+<!--        <item>@drawable/charmander</item>-->
+<!--        <item>@drawable/charmeleon</item>-->
+<!--        <item>@drawable/charizard</item>-->
+<!--        <item>@drawable/squirtle</item>-->
+<!--        <item>@drawable/wartortle</item>-->
+<!--        <item>@drawable/blastoise</item>-->
+<!--        <item>@drawable/caterpie</item>-->
+<!--    </integer-array>-->
+
+    <string name="pokemon_hp">HP</string>
+    <integer-array name="pokemon_hp_arr">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </integer-array>
+
+
+
+    <string name="attacks">Name</string>
+    <string-array name="attacks_arr">
+        <item>
+            [
+                {\"name\": \"Очарование\", \"description\": \"Покемон глядит на цель очень умилительно, заставляя её быть менее осторожной. Понижает Атаку цели на две ступени.\", \"damage\": \"80\"},
+                {\"name\": \"Таран\", \"description\": \"Атака 21 уровня. Покемон таранит цель. Покемон получает отдачу в размере 1/4 нанесённых повреждений.\", \"damage\": 90},
+                {\"name\": \"Взрывное семя\", \"description\": \"Атака 18 уровня, Покемон осыпает цель градом взрывных семян.\", \"damage\": 80},
+                {\"name\": \"Таран\", \"description\": \"Атака 21 уровня. Покемон таранит цель. Покемон получает отдачу в размере 1/4 нанесённых повреждений.\", \"damage\": 90},
+                {\"name\": \"Взрывное семя\", \"description\": \"Атака 18 уровня, Покемон осыпает цель градом взрывных семян.\", \"damage\": 80},
+                {\"name\": \"Таран\", \"description\": \"Атака 21 уровня. Покемон таранит цель. Покемон получает отдачу в размере 1/4 нанесённых повреждений.\", \"damage\": 90},
+                {\"name\": \"Взрывное семя\", \"description\": \"Атака 18 уровня, Покемон осыпает цель градом взрывных семян.\", \"damage\": 80},
+                {\"name\": \"Таран\", \"description\": \"Атака 21 уровня. Покемон таранит цель. Покемон получает отдачу в размере 1/4 нанесённых повреждений.\", \"damage\": 90},
+                {\"name\": \"Взрывное семя\", \"description\": \"Атака 18 уровня, Покемон осыпает цель градом взрывных семян.\", \"damage\": 80},
+                {\"name\": \"Таран\", \"description\": \"Атака 21 уровня. Покемон таранит цель. Покемон получает отдачу в размере 1/4 нанесённых повреждений.\", \"damage\": 90}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Ивизавр\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Венузавр\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Чармандер\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Чармелеон\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Чаризард\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Сквиртл\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Вартортл\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Бластойз\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+        <item>
+            [
+                {\"name\": \"Катерпи\", \"description\": \"dawd\", \"damage\": 10}
+            ]
+        </item>
+    </string-array>
+
+
+</resources>
