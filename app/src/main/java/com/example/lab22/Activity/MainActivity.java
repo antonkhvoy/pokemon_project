@@ -8,18 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.lab22.Adapters.PokemonAdapter;
 import com.example.lab22.Adapters.RecyclerViewClickListener;
-import com.example.lab22.Models.Attack;
 import com.example.lab22.Models.Pokemon;
 import com.example.lab22.R;
 import com.example.lab22.utils.Util;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {

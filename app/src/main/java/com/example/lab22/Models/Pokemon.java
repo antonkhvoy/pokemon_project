@@ -2,7 +2,6 @@ package com.example.lab22.Models;
 
 
 import java.util.List;
-import java.util.StringJoiner;
 
 public class Pokemon {
     private String name;

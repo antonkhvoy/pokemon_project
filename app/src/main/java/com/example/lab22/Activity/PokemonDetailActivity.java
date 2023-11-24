@@ -7,15 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.lab22.Adapters.AttackAdapter;
-import com.example.lab22.Models.Attack;
 import com.example.lab22.Models.Pokemon;
 import com.example.lab22.R;
 import com.example.lab22.utils.Util;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class PokemonDetailActivity extends AppCompatActivity {
 
