@@ -2,12 +2,13 @@ package com.example.lab22.Models;
 
 
 import java.util.List;
+import java.util.StringJoiner;
 
 public class Pokemon {
-    private final String name;
-    private final int imageResourceId;
-    private final int hp;
-    private final List<Attack> attacks;
+    private String name;
+    private String imageResourceId;
+    private int hp;
+    private List<Attack> attacks;
 
     /**
      * Конструктор для создания объекта Pokemon.
@@ -17,18 +18,22 @@ public class Pokemon {
      * @param hp               Количество здоровья покемона.
      * @param attacks          Список атак, которые покемон может выполнять.
      */
-    public Pokemon(String name, int imageResourceId, int hp, List<Attack> attacks) {
+    public Pokemon(String name, String imageResourceId, int hp, List<Attack> attacks) {
         this.name = name;
         this.imageResourceId = imageResourceId;
         this.hp = hp;
         this.attacks = attacks;
     }
 
+    public Pokemon() {
+
+    }
+
     public String getName() {
         return name;
     }
 
-    public int getImageResourceId() {
+    public String getImageResourceId() {
         return imageResourceId;
     }
 

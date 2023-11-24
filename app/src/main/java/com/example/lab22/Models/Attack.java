@@ -4,7 +4,7 @@ package com.example.lab22.Models;
 public class Attack {
     private String name;
     private String description;
-    private int damage;
+    private String damage;
 
     /**
      * Конструктор для создания объекта Attack.
@@ -13,7 +13,7 @@ public class Attack {
      * @param description Описание атаки.
      * @param damage      Количество урона, наносимое атакой.
      */
-    public Attack(String name, String description, int damage) {
+    public Attack(String name, String description, String damage) {
         this.name = name;
         this.description = description;
         this.damage = damage;
@@ -29,7 +29,7 @@ public class Attack {
     public String getDescription() {
         return description;
     }
-    public int getDamage() {
+    public String getDamage() {
         return damage;
     }
 }

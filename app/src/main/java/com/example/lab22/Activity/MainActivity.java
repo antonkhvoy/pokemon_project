@@ -8,10 +8,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.lab22.Adapters.PokemonAdapter;
 import com.example.lab22.Adapters.RecyclerViewClickListener;
+import com.example.lab22.Models.Attack;
 import com.example.lab22.Models.Pokemon;
 import com.example.lab22.R;
+import com.example.lab22.utils.Util;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Инициализация списка покемонов и адаптера
-        List<Pokemon> pokemonList = createPokemonList();
+        List<Pokemon> pokemonList = Util.createPokemonList(this);
         PokemonAdapter adapter = new PokemonAdapter(this, R.layout.pokemon_list_item, pokemonList);
 
         // Настройка RecyclerView
@@ -50,24 +58,9 @@ public class MainActivity extends AppCompatActivity {
         }));
     }
 
-    private List<Pokemon> createPokemonList() {
-        ArrayList<Pokemon> PokemonList = new ArrayList<>();
-        String[] names = getResources().getStringArray(R.array.pokemon_names_arr);
-        //int[] imagesId = getResources().getIntArray(R.array.pokemon_image_id_arr);
-        int[] hp = getResources().getIntArray(R.array.pokemon_hp_arr);
-        for (int i = 0; i < names.length; i++) {
-            PokemonList.add(new Pokemon(names[i], rowImages[i], hp[i], null));
-        }
-        return PokemonList;
-    }
-
     private void openPokemonDetailActivity(Pokemon pokemon, int position) {
         Intent intent = new Intent(this, PokemonDetailActivity.class);
-        intent.putExtra("pokemonName", pokemon.getName());
-        intent.putExtra("pokemonHp", pokemon.getHp());
-        intent.putExtra("pokemonImage", pokemon.getImageResourceId());
         intent.putExtra("position", position);
-        //intent.putA("pokemonAttacks", pokemon.getAttacks());
         startActivity(intent);
     }
 }

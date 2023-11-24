@@ -10,6 +10,7 @@ import com.example.lab22.Adapters.AttackAdapter;
 import com.example.lab22.Models.Attack;
 import com.example.lab22.Models.Pokemon;
 import com.example.lab22.R;
+import com.example.lab22.utils.Util;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -28,16 +29,11 @@ public class PokemonDetailActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.detailRecyclerView);
 
         // Получение данных о выбранном покемоне
-        Pokemon pokemon = null;
-        try {
-            pokemon = getPokemon();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Pokemon pokemon = getPokemon();
 
 
         // Отображение данных на втором экране
-        imageView.setImageResource(pokemon.getImageResourceId());
+        imageView.setImageResource(Util.getResId(pokemon.getImageResourceId(), R.drawable.class));
         nameTextView.setText(pokemon.getName());
 
         // Установка адаптера для RecyclerView
@@ -47,19 +43,9 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
     }
 
-    private Pokemon getPokemon() throws IOException {
-        String name = getIntent().getStringExtra("pokemonName");
-        int hp = getIntent().getIntExtra("pokemonHp", 0);
-        int image = getIntent().getIntExtra("pokemonImage", 0);
+    private Pokemon getPokemon() {
         int position = getIntent().getIntExtra("position", 0);
-        String attackJson = getResources().getStringArray(R.array.attacks_arr)[position];
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        ArrayList<Attack> attack = new ArrayList<>();
-
-        Attack[] attacks = mapper.readValue(attackJson, Attack[].class);
-
-        return new Pokemon(name, image, hp, Arrays.asList(attacks));
+        return Util.createPokemonList(this).get(position);
     }
 }

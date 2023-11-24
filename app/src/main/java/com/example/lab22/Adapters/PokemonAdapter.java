@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.lab22.Models.Pokemon;
 import com.example.lab22.R;
+import com.example.lab22.utils.Util;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -62,7 +63,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     public void onBindViewHolder(@NotNull PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonList.get(position);
         holder.pokemonNameTextView.setText(pokemon.getName());
-        holder.pokemonImageView.setImageResource(pokemon.getImageResourceId());
+        holder.pokemonImageView.setImageResource(Util.getResId(pokemon.getImageResourceId(), R.drawable.class));
         holder.pokemonHpTextView.setText(String.valueOf(pokemon.getHp()));
     }
 
