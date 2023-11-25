@@ -1,4 +1,4 @@
-package com.example.lab22.Models;
+package com.example.pokemon_project.Models;
 
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.lab22;
+package com.example.pokemon_project;
 
 import org.junit.Test;
 

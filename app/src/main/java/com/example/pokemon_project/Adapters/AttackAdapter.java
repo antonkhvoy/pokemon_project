@@ -1,4 +1,4 @@
-package com.example.lab22.Adapters;
+package com.example.pokemon_project.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.lab22.Models.Attack;
-import com.example.lab22.R;
+import com.example.pokemon_project.Models.Attack;
+import com.example.pokemon_project.R;
 
 import java.util.List;
 

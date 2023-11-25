@@ -1,4 +1,4 @@
-package com.example.lab22.Activity;
+package com.example.pokemon_project.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,22 +6,15 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.lab22.Adapters.PokemonAdapter;
-import com.example.lab22.Adapters.RecyclerViewClickListener;
-import com.example.lab22.Models.Pokemon;
-import com.example.lab22.R;
-import com.example.lab22.utils.Util;
+import com.example.pokemon_project.Adapters.PokemonAdapter;
+import com.example.pokemon_project.Adapters.RecyclerViewClickListener;
+import com.example.pokemon_project.Models.Pokemon;
+import com.example.pokemon_project.R;
+import com.example.pokemon_project.utils.Util;
 
 import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
 
-    int[] rowImages = {R.drawable.bulba, R.drawable.ivi, R.drawable.venu,
-            R.drawable.charmander, R.drawable.charmeleon, R.drawable.charizard,
-            R.drawable.squirtle, R.drawable.wartortle, R.drawable.blastoise, R.drawable.caterpie};
-
-
-    //@SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

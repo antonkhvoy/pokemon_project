@@ -1,8 +1,8 @@
-package com.example.lab22.utils;
+package com.example.pokemon_project.utils;
 
 import android.content.Context;
-import com.example.lab22.Models.Pokemon;
-import com.example.lab22.R;
+import com.example.pokemon_project.Models.Pokemon;
+import com.example.pokemon_project.R;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;

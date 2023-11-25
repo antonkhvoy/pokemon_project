@@ -1,4 +1,4 @@
-package com.example.lab22.Adapters;
+package com.example.pokemon_project.Adapters;
 
 
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.lab22.Models.Pokemon;
-import com.example.lab22.R;
-import com.example.lab22.utils.Util;
+import com.example.pokemon_project.Models.Pokemon;
+import com.example.pokemon_project.R;
+import com.example.pokemon_project.utils.Util;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

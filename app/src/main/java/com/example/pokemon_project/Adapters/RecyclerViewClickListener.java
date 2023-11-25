@@ -1,4 +1,4 @@
-package com.example.lab22.Adapters;
+package com.example.pokemon_project.Adapters;
 
 
 import android.content.Context;

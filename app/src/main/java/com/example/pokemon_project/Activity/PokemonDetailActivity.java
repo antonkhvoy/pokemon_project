@@ -1,4 +1,4 @@
-package com.example.lab22.Activity;
+package com.example.pokemon_project.Activity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -6,10 +6,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.lab22.Adapters.AttackAdapter;
-import com.example.lab22.Models.Pokemon;
-import com.example.lab22.R;
-import com.example.lab22.utils.Util;
+import com.example.pokemon_project.Adapters.AttackAdapter;
+import com.example.pokemon_project.Models.Pokemon;
+import com.example.pokemon_project.R;
+import com.example.pokemon_project.utils.Util;
 
 public class PokemonDetailActivity extends AppCompatActivity {
 
