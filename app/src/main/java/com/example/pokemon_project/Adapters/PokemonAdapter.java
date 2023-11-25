@@ -37,7 +37,7 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     public void onBindViewHolder(@NotNull PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonList.get(position);
         holder.pokemonNameTextView.setText(pokemon.getName());
-        holder.pokemonImageView.setImageResource(Util.getResId(pokemon.getImageResourceId(), R.drawable.class));
+        holder.pokemonImageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
         holder.pokemonHpTextView.setText(String.valueOf(pokemon.getHp()));
     }
 

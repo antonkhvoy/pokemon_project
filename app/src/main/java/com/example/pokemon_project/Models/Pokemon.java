@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pokemon {
     private String name;
-    private String imageResourceId;
+    private Images images;
     private int hp;
     private List<Attack> attacks;
 
@@ -13,13 +13,13 @@ public class Pokemon {
      * Конструктор для создания объекта Pokemon.
      *
      * @param name             Имя покемона.
-     * @param imageResourceId  Идентификатор ресурса изображения покемона.
+     * @param images  Идентификатор ресурса изображения покемона.
      * @param hp               Количество здоровья покемона.
      * @param attacks          Список атак, которые покемон может выполнять.
      */
-    public Pokemon(String name, String imageResourceId, int hp, List<Attack> attacks) {
+    public Pokemon(String name, Images images, int hp, List<Attack> attacks) {
         this.name = name;
-        this.imageResourceId = imageResourceId;
+        this.images = images;
         this.hp = hp;
         this.attacks = attacks;
     }
@@ -32,8 +32,8 @@ public class Pokemon {
         return name;
     }
 
-    public String getImageResourceId() {
-        return imageResourceId;
+    public Images getImages() {
+        return images;
     }
 
     public int getHp() {

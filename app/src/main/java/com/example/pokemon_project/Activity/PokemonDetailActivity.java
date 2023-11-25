@@ -27,7 +27,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
 
 
         // Отображение данных на втором экране
-        imageView.setImageResource(Util.getResId(pokemon.getImageResourceId(), R.drawable.class));
+        imageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
         nameTextView.setText(pokemon.getName());
 
         // Установка адаптера для RecyclerView
