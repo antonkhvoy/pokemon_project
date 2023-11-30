@@ -13,7 +13,7 @@
             android:theme="@style/Theme.Lab22"
             tools:targetApi="29">
         <activity
-                android:name=".Activity.PokemonDetailActivity"
+                android:name=".Activity.DetailActivity"
                 android:exported="false"/>
         <activity
                 android:name=".Activity.MainActivity"

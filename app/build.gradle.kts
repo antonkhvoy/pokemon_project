@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pokemon_project"
+    namespace = "com.example.lab1_1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pokemon_project"
+        applicationId = "com.example.lab1_1"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

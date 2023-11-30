@@ -1,4 +1,4 @@
-package com.example.pokemon_project;
+package com.example.lab1_1;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

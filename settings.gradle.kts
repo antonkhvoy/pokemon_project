@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pokemon_project"
+rootProject.name = "lab1_1"
 include(":app")
  
