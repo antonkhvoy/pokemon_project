@@ -9,7 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pokemon_project.Adapters.AttackAdapter;
 import com.example.pokemon_project.Models.Pokemon;
 import com.example.pokemon_project.R;
+import com.example.pokemon_project.network.Common;
+import com.example.pokemon_project.network.PokemonCardDetail;
+import com.example.pokemon_project.network.PokemonCardsList;
+import com.example.pokemon_project.utils.DownloadImageTask;
 import com.example.pokemon_project.utils.Util;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PokemonDetailActivity extends AppCompatActivity {
 
@@ -22,24 +29,28 @@ public class PokemonDetailActivity extends AppCompatActivity {
         TextView nameTextView = findViewById(R.id.detailNameTextView);
         RecyclerView recyclerView = findViewById(R.id.detailRecyclerView);
 
-        // Получение данных о выбранном покемоне
-        Pokemon pokemon = getPokemon();
+        String id = getIntent().getStringExtra("id");
+        Common.getRetrofitService().getCardDetail(id).enqueue(new Callback<PokemonCardDetail>() {
 
+            @Override
+            public void onResponse(Call<PokemonCardDetail> call, Response<PokemonCardDetail> response) {
+                Pokemon pokemon = response.body().getData();
 
-        // Отображение данных на втором экране
-        imageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
-        nameTextView.setText(pokemon.getName());
+                // Отображение данных на втором экране
+                //imageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
+                new DownloadImageTask(imageView, (bitmap) -> {}).execute(pokemon.getImages().getLarge());
+                nameTextView.setText(pokemon.getName());
 
-        // Установка адаптера для RecyclerView
-        AttackAdapter attackAdapter = new AttackAdapter(pokemon.getAttacks());
-        recyclerView.setAdapter(attackAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                // Установка адаптера для RecyclerView
+                AttackAdapter attackAdapter = new AttackAdapter(pokemon.getAttacks());
+                recyclerView.setAdapter(attackAdapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+            }
 
-    }
+            @Override
+            public void onFailure(Call<PokemonCardDetail> call, Throwable t) {
 
-    private Pokemon getPokemon() {
-        int position = getIntent().getIntExtra("position", 0);
-
-        return Util.createPokemonList(this).get(position);
+            }
+        });
     }
 }

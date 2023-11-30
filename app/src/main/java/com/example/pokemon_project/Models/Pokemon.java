@@ -4,19 +4,12 @@ package com.example.pokemon_project.Models;
 import java.util.List;
 
 public class Pokemon {
+    private String id;
     private String name;
     private Images images;
     private int hp;
     private List<Attack> attacks;
 
-    /**
-     * Конструктор для создания объекта Pokemon.
-     *
-     * @param name             Имя покемона.
-     * @param images  Идентификатор ресурса изображения покемона.
-     * @param hp               Количество здоровья покемона.
-     * @param attacks          Список атак, которые покемон может выполнять.
-     */
     public Pokemon(String name, Images images, int hp, List<Attack> attacks) {
         this.name = name;
         this.images = images;
@@ -26,6 +19,10 @@ public class Pokemon {
 
     public Pokemon() {
 
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
