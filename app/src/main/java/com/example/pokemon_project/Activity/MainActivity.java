@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         rvItems.setLayoutManager(linearLayoutManager);
 
         // Инициализация списка покемонов и адаптера
-        //List<Pokemon> pokemonList = Util.createPokemonList(this);
         Common.getRetrofitService().getPokemonCardsList().enqueue(new Callback<PokemonCardsList>() {
             @Override
             public void onResponse(Call<PokemonCardsList> call, Response<PokemonCardsList> response) {

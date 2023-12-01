@@ -11,9 +11,7 @@ import com.example.pokemon_project.Models.Pokemon;
 import com.example.pokemon_project.R;
 import com.example.pokemon_project.network.Common;
 import com.example.pokemon_project.network.PokemonCardDetail;
-import com.example.pokemon_project.network.PokemonCardsList;
 import com.example.pokemon_project.utils.DownloadImageTask;
-import com.example.pokemon_project.utils.Util;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,7 +35,6 @@ public class PokemonDetailActivity extends AppCompatActivity {
                 Pokemon pokemon = response.body().getData();
 
                 // Отображение данных на втором экране
-                //imageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
                 new DownloadImageTask(imageView, (bitmap) -> {}).execute(pokemon.getImages().getLarge());
                 nameTextView.setText(pokemon.getName());
 
@@ -48,9 +45,7 @@ public class PokemonDetailActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<PokemonCardDetail> call, Throwable t) {
-
-            }
+            public void onFailure(Call<PokemonCardDetail> call, Throwable t) {}
         });
     }
 }

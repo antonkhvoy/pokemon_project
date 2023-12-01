@@ -6,13 +6,6 @@ public class Attack {
     private String description;
     private String damage;
 
-    /**
-     * Конструктор для создания объекта Attack.
-     *
-     * @param name        Название атаки.
-     * @param description Описание атаки.
-     * @param damage      Количество урона, наносимое атакой.
-     */
     public Attack(String name, String description, String damage) {
         this.name = name;
         this.description = description;

@@ -2,7 +2,6 @@ package com.example.pokemon_project.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import okhttp3.Interceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

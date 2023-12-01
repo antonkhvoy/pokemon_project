@@ -23,11 +23,9 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
 
     private final List<Pokemon> pokemonList;
     private final List<Bitmap> imageList;
-    //private final Context context;
 
     public PokemonAdapter(List<Pokemon> pokemonList) {
         this.pokemonList = pokemonList;
-        //this.context = context;
         this.imageList = new ArrayList<>(pokemonList.size());
         for (Pokemon pokemon:pokemonList) {
             imageList.add(null);
@@ -45,7 +43,6 @@ public class PokemonAdapter extends RecyclerView.Adapter<PokemonAdapter.PokemonV
     public void onBindViewHolder(@NotNull PokemonViewHolder holder, int position) {
         Pokemon pokemon = pokemonList.get(position);
         holder.pokemonNameTextView.setText(pokemon.getName());
-        //holder.pokemonImageView.setImageResource(Util.getResId(pokemon.getImages().getSmall(), R.drawable.class));
         holder.pokemonHpTextView.setText(String.valueOf(pokemon.getHp()));
         if (imageList.get(position) != null)
             holder.pokemonImageView.setImageBitmap(imageList.get(position));
