@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".Activity.GooglePlayActivity">
+
+    <LinearLayout
+            android:id="@+id/linearLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+        <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:scrollbars="none">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="57dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="50dp">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Рекомендуем"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlueSky"
+                            android:textSize="@dimen/text_size" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:layout_marginTop="-4dp"
+                            android:background="@drawable/shp"/>
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:text="Лучшее"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"
+                        android:textSize="@dimen/text_size"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:text="Детям"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"
+                        android:textSize="@dimen/text_size"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="40dp"
+                        android:text="Категории"
+                        android:textStyle="bold"
+                        android:textColor="@color/silver"
+                        android:textSize="@dimen/text_size"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/colorTopLine"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="30dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutMain">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Акция скоро закончится"
+                    android:textColor="@color/silver"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/headerTextSize"/>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardviewborder"
+                    android:padding="2dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="11dp">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ural_air"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimaryDark"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="15dp"
+                                android:paddingVertical="20dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trip.com: Отели, рейсы\nПоезда   *   Завершится 23.02.2002"
+                                    android:textColor="@color/tinyText"
+                                    android:textSize="15sp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="15dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Скидки до 50% на перелеты классом\nэконом и до 60% классом бизнес | Ural Airlines"
+                                    android:textColor="@color/silver"
+                                    android:textSize="18sp" />
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Узнать больше"
+                                    android:textColor="@color/textLink"
+                                    android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp">
+
+                <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:text="Последние обновления"
+                        android:textColor="@color/silver"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_below="@+id/text"
+                        android:text="Новые функции и контент"
+                        android:textColor="@color/tinyText"/>
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/next"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:tint="@color/silver" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:scrollbars="none">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                    android:layout_width="102dp"
+                                    android:layout_height="102dp"
+                                    android:layout_marginTop="-6dp"
+                                    android:layout_marginStart="-6dp"
+                                    android:src="@mipmap/paypal"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="PayPal"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="4,4 *"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                    android:layout_width="102dp"
+                                    android:layout_height="102dp"
+                                    android:layout_marginTop="-6dp"
+                                    android:layout_marginStart="-6dp"
+                                    android:src="@mipmap/netflix"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="Netflix"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="4,7 *"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                    android:layout_width="102dp"
+                                    android:layout_height="102dp"
+                                    android:layout_marginTop="-6dp"
+                                    android:layout_marginStart="-6dp"
+                                    android:src="@mipmap/snapchat"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="Snapchat"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="4,0 *"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                    android:layout_width="102dp"
+                                    android:layout_height="102dp"
+                                    android:layout_marginTop="-6dp"
+                                    android:layout_marginStart="-6dp"
+                                    android:src="@mipmap/spotify"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="Spotify"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/silver"
+                                android:textSize="@dimen/text_size"
+                                android:text="4,8 *"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:background="@color/colorBottomMenu"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@mipmap/console"
+                    app:tint="@color/silver" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Игры"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/silver"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp"
+                android:gravity="center_horizontal">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+
+                    android:background="@drawable/activeiconbackground">
+
+                <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/apps_active"
+                        app:tint="@color/activeIcon" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Приложения"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/silver"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@mipmap/film"
+                    app:tint="@color/silver" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Фильмы"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/silver"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="30dp"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@mipmap/book_new"
+                    app:tint="@color/silver" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Книги"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size"
+                    android:textColor="@color/silver"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

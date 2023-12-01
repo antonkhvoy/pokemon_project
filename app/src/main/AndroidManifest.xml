@@ -10,8 +10,11 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Lab22"
+            android:theme="@style/Theme.AppCompat.Light"
             tools:targetApi="29">
+        <activity
+                android:name=".Activity.GooglePlayActivity"
+                android:exported="false"/>
         <activity
                 android:name=".Activity.DetailActivity"
                 android:exported="false"/>

@@ -12,38 +12,38 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.w("MyApp", "DetailActivity onCreate() called");
+        Log.w("MyApp", "MainActivity onCreate() called");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
     @Override
     protected void onStart() {
-        Log.w("MyApp", "DetailActivity onStart() called");
+        Log.w("MyApp", "MainActivity onStart() called");
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        Log.w("MyApp", "DetailActivity onResume() called");
+        Log.w("MyApp", "MainActivity onResume() called");
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        Log.w("MyApp", "DetailActivity onPause() called");
+        Log.w("MyApp", "MainActivity onPause() called");
         super.onPause();
     }
 
     @Override
     protected void onStop() {
-        Log.w("MyApp", "DetailActivity onStop() called");
+        Log.w("MyApp", "MainActivity onStop() called");
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {
-        Log.w("MyApp", "DetailActivity onDestroy() called");
+        Log.w("MyApp", "MainActivity onDestroy() called");
         super.onDestroy();
     }
 
@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
     public void openWebPage(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("https://www.youtube.com/watch?v=J7UwSVsiwzI"));
+        startActivity(intent);
+    }
+
+    public void openGooglePlayActivity(View view) {
+        Intent intent = new Intent(this, GooglePlayActivity.class);
         startActivity(intent);
     }
 }

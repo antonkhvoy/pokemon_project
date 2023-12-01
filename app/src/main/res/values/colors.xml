@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="silver">#b6babc</color>
+    <color name="activeSilver">#d1d5d6</color>
+    <color name="activeIcon">#c8e4f5</color>
+    <color name="activeBackgroundIcon">#004a77</color>
+    <color name="textLink">#267a62</color>
+    <color name="tinyText">#797979</color>
+    <color name="colorPrimaryDark">#1f1f1f</color>
+    <color name="colorBottomMenu">#292c31</color>
+    <color name="colorTopLine">#3f3f40</color>
+    <color name="colorBlueSky">#a6c8f6</color>
+    <color name="colorcardBorder">#3d3d3d</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
 </resources>
